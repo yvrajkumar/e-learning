@@ -27,14 +27,14 @@ function Resource() {
         })
       }
       else{
-        history.push("/");
+        history.push("/home");
       }
     
       }, [url,history]);
     
     const homepageHandler = async (e) => {
         e.preventDefault();
-        history.push('/');
+        history.push('/home');
         return;
     }
 
