@@ -20,14 +20,14 @@ function LogIn() {
        
       if(localStorage.getItem("userDetails")!=null)
       {
-        history.push("/home");
+        window.location.replace("/home");
       }
 
       const onSubmitHandler = async (e) => {
       if(LoginDetails["email"]==="admin" && LoginDetails["password"]==="admin")
       {
           localStorage.setItem('userDetails', "admin");
-          history.push('/home');
+          window.location.replace('/home');
       }
       else{
         e.preventDefault();
@@ -37,7 +37,7 @@ function LogIn() {
         {
           console.log(res.data);
           localStorage.setItem('userDetails', JSON.stringify(res.data));
-          history.push('/home');
+          window.location.replace('/home');
           
         }
         else{
@@ -54,7 +54,7 @@ function LogIn() {
 
       const homepageHandler = async (e) => {
         e.preventDefault();
-        history.push('/');
+        window.location.replace('/');
         return;
     }
 
