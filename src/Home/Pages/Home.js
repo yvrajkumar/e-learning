@@ -41,6 +41,10 @@ function Home() {
       })
     }
     }
+    else
+    {
+      history.push("/");
+    }
     },{url,history})
 
     const addresourcenavHandler = async (e) => {
@@ -51,7 +55,7 @@ function Home() {
 
     const homepageHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/');
+      window.location.replace('/home');
       return;
     }
 
