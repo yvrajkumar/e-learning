@@ -18,11 +18,6 @@ function LogIn() {
         setLoginDetails(user);
       };
        
-      if(localStorage.getItem("userDetails")!=null)
-      {
-        window.location.replace("/home");
-      }
-
       const onSubmitHandler = async (e) => {
       if(LoginDetails["email"]==="admin" && LoginDetails["password"]==="admin")
       {
@@ -37,7 +32,7 @@ function LogIn() {
         {
           console.log(res.data);
           localStorage.setItem('userDetails', JSON.stringify(res.data));
-          window.location.replace('/home')
+          window.location.replace('/home');
           
         }
         else{
