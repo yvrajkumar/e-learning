@@ -37,6 +37,12 @@ function Resource() {
         history.push('/');
         return;
     }
+    
+    const addresourcenavHandler = async (e) => {
+      e.preventDefault();
+      history.push('/addresource');
+      return;
+    }
   
     const logoutHandler = async (e) => {
       e.preventDefault();
@@ -49,7 +55,8 @@ function Resource() {
     <div style={{width: "100vw",height: "100vh"}}>
       <div style={{background:"#C73A0D",display:"flex"}}>
           <h1 style={{color:"white",padding:"10px",cursor:"pointer"}} onClick={homepageHandler}>E-Learning</h1>
-          <h3 style={{color:"white",padding:"10px",marginLeft:"75%", cursor:"pointer"}} onClick={logoutHandler}>Logout</h3>
+          <h3 style={{color:"white",padding:"10px", paddingTop:"20px", marginLeft:"60%", cursor:"pointer"}} onClick={addresourcenavHandler}>Add Resource</h3>
+          <h3 style={{color:"white",padding:"10px", paddingTop:"20px", cursor:"pointer"}} onClick={logoutHandler}>Logout</h3>
       </div>
       <div style={{display:"flex"}}>
         <h3 style={{marginLeft: "5%", marginTop:"15px"}}>{ResourceDetails.resourceName}</h3>

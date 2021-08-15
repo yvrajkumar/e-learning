@@ -35,6 +35,13 @@ function Home() {
       history.push('/');
       return;
     }
+
+    const addresourcenavHandler = async (e) => {
+      e.preventDefault();
+      history.push('/addresource');
+      return;
+    }
+
     const logoutHandler = async (e) => {
       e.preventDefault();
       localStorage.removeItem('userDetails');
@@ -47,7 +54,8 @@ function Home() {
     <div style={{width: "100vw",height: "100vh"}}>
       <div style={{background:"#C73A0D",display:"flex"}}>
           <h1 style={{color:"white",padding:"10px", cursor:"pointer"}} onClick={homepageHandler}>E-Learning</h1>
-          <h3 style={{color:"white",padding:"10px",marginLeft:"75%", cursor:"pointer"}} onClick={logoutHandler}>Logout</h3>
+          <h3 style={{color:"white",padding:"10px", paddingTop:"20px", marginLeft:"60%", cursor:"pointer"}} onClick={addresourcenavHandler}>Add Resource</h3>
+          <h3 style={{color:"white",padding:"10px", paddingTop:"20px", cursor:"pointer"}} onClick={logoutHandler}>Logout</h3>
       </div>
       <div>
         <input type="text" style={{width: "50vw", marginLeft: "25%", padding:"5px", marginTop:"15px"}} name="search"></input>
@@ -56,7 +64,7 @@ function Home() {
       <div style={{marginLeft: "10%", marginRight: "10%", marginTop:"5%", display:"flex", flexWrap: "wrap" }}> 
         {ResourceDetails.map((resource) => (
 
-          <div style={{maxWidth:"20%",maxHeight:"25%", margin:"20px", background:"#F3D8CF", textAlign:"center"}}>
+          <div style={{maxWidth:"15%",maxHeight:"25%", margin:"20px", background:"#F3D8CF", textAlign:"center"}}>
           <Link to={"/resource/"+resource.resourceId} style={{color: "black",}}>
               <img src={resource.imageUrl} alt="img" width="100%" height="50%"></img><br></br><br></br>
               <h5>{resource.resourceName}</h5><br></br> 

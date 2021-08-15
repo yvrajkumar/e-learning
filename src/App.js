@@ -10,6 +10,7 @@ import Login from "./Login/Pages/Login";
 import Signup from "./Signup/Pages/Signup";
 import Home from "./Home/Pages/Home";
 import Resource from "./Resource/Pages/Resource";
+import Addresource from "./Addresource/Pages/Addresource";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
             <Route path="/home" component={Home} />
+            <Route path="/addresource" component={Addresource} />
             <Route path="/resource/:id" component={Resource} />
             <Redirect to="/"></Redirect>
           </Switch>
