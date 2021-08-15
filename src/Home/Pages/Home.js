@@ -41,9 +41,6 @@ function Home() {
       })
     }
     }
-    else{
-      window.location.replace("/");
-    }
     },{url,history})
 
     const addresourcenavHandler = async (e) => {
