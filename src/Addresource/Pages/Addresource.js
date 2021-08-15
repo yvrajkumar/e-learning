@@ -47,7 +47,7 @@ function Addresource() {
     
     const homepageHandler = async (e) => {
         e.preventDefault();
-        window.location.replace('/');
+        window.location.replace('/home');
         return;
     }
 

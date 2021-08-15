@@ -51,7 +51,7 @@ function Signup() {
 
       const homepageHandler = async (e) => {
         e.preventDefault();
-        history.push('/home');
+        history.push('/');
         return;
     }
     
