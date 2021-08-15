@@ -1,0 +1,40 @@
+.Addresource_Box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 5%;
+    padding-right: 10% ;
+    align-items: center;
+}
+
+::placeholder { 
+    color: black;
+  }
+.Addresource_Box input{
+    width: 150%;
+    margin: 15px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-color: transparent;
+    background-color: #CCCCCC;
+    font-weight: bold;
+    color: black; 
+}
+
+.Addresource_Box input[type="submit"]{
+    width: 70%;
+    padding: 10px;
+    margin-left: 120px;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+}
+.Addresource_Box input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.Addresource_Box .title_SU{
+    margin-left: 150px;
+    color: White;
+}

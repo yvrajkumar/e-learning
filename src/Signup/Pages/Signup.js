@@ -31,7 +31,7 @@ function Signup() {
           console.log(res);
           console.log(res.data);
           console.log(res.status);
-          if(res.data==="true")
+          if(res.data===true)
           {
             console.log(res.data.validation);
             localStorage.setItem('userDetails', JSON.stringify(res.data));
