@@ -24,7 +24,7 @@ function Addresource() {
     .then(res => {
       if(res.status===200)
       {
-        window.location.replace('/addresource');
+        history.push('/addresource');
         setAlert("Resource added successfully");
         
       }
@@ -47,32 +47,32 @@ function Addresource() {
     
     const homepageHandler = async (e) => {
         e.preventDefault();
-        window.location.replace('/home');
+        history.push('/home');
         return;
     }
 
     const coursepagenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/course');
+      history.push('/course');
       return;
     }
 
     const homepagenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/home');
+      history.push('/home');
       return;
     }
     
     const addresourcenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/addresource');
+      history.push('/addresource');
       return;
     }
   
     const logoutHandler = async (e) => {
       e.preventDefault();
       localStorage.removeItem('userDetails');
-      window.location.replace('/');
+      history.push('/');
       return;
     }
     

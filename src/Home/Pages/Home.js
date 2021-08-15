@@ -49,32 +49,32 @@ function Home() {
 
     const addresourcenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/addresource');
+      history.push('/addresource');
       return;
     }
 
     const homepageHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/home');
+      history.push('/home');
       return;
     }
 
     const coursepagenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/course');
+      history.push('/course');
       return;
     }
 
     const homepagenavHandler = async (e) => {
       e.preventDefault();
-      window.location.replace('/home');
+      history.push('/home');
       return;
     }
 
     const logoutHandler = async (e) => {
       e.preventDefault();
       localStorage.removeItem('userDetails');
-      window.location.replace('/');
+      history.push('/');
       return;
     }
 
@@ -87,7 +87,7 @@ function Home() {
         console.log(res.status);
         if(res.status===200)
         {  
-          window.location.replace("/course");
+          history.push("/course");
         }     
         
       })
@@ -102,7 +102,7 @@ function Home() {
         console.log(res.status);
         if(res.status===200)
         {  
-          window.location.replace("/home");
+          history.push("/home");
         }     
         
       })
