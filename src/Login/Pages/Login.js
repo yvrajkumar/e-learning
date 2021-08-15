@@ -18,6 +18,11 @@ function LogIn() {
         setLoginDetails(user);
       };
        
+      if(localStorage.getItem("userDetails")!=null)
+      {
+        window.location.replace("/home");
+      }
+
       const onSubmitHandler = async (e) => {
       if(LoginDetails["email"]==="admin" && LoginDetails["password"]==="admin")
       {
