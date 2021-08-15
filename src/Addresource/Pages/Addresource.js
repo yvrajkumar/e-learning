@@ -24,7 +24,7 @@ function Addresource() {
     .then(res => {
       if(res.status===200)
       {
-        history.push('/addresource');
+        window.location.replace('/addresource');
         setAlert("Resource added successfully");
         
       }
@@ -47,20 +47,32 @@ function Addresource() {
     
     const homepageHandler = async (e) => {
         e.preventDefault();
-        history.push('/');
+        window.location.replace('/');
         return;
+    }
+
+    const coursepagenavHandler = async (e) => {
+      e.preventDefault();
+      window.location.replace('/course');
+      return;
+    }
+
+    const homepagenavHandler = async (e) => {
+      e.preventDefault();
+      window.location.replace('/home');
+      return;
     }
     
     const addresourcenavHandler = async (e) => {
       e.preventDefault();
-      history.push('/addresource');
+      window.location.replace('/addresource');
       return;
     }
   
     const logoutHandler = async (e) => {
       e.preventDefault();
       localStorage.removeItem('userDetails');
-      history.push('/');
+      window.location.replace('/');
       return;
     }
     
@@ -68,7 +80,16 @@ function Addresource() {
     <div style={{width: "100vw",height: "100vh"}}>
       <div style={{background:"#C73A0D",display:"flex"}}>
           <h1 style={{color:"white",padding:"10px",cursor:"pointer"}} onClick={homepageHandler}>E-Learning</h1>
-          <h3 style={{color:"white",padding:"10px", paddingTop:"20px", marginLeft:"60%", cursor:"pointer"}} onClick={addresourcenavHandler}>Add Resource</h3>
+          {
+              localStorage.getItem("userDetails")==="admin"?
+                  <>
+                  <h3 style={{color:"white",padding:"10px", paddingTop:"20px", marginLeft:"60%", cursor:"pointer"}} onClick={homepagenavHandler}>Home</h3>
+                  <h3 style={{color:"white",padding:"10px", paddingTop:"20px", cursor:"pointer"}} onClick={coursepagenavHandler}>Course</h3>
+                  </>
+                :
+                <h3 style={{color:"white",padding:"10px", paddingTop:"20px", marginLeft:"60%", cursor:"pointer"}} onClick={addresourcenavHandler}>Add Resource</h3>
+
+          }
           <h3 style={{color:"white",padding:"10px", paddingTop:"20px", cursor:"pointer"}} onClick={logoutHandler}>Logout</h3>
       </div>
       <div className={classes.Addresource_Box}>

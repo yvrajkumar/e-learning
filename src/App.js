@@ -21,6 +21,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
             <Route path="/home" component={Home} />
+            <Route path="/course" component={Home} />
             <Route path="/addresource" component={Addresource} />
             <Route path="/resource/:id" component={Resource} />
             <Redirect to="/"></Redirect>
