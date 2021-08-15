@@ -34,7 +34,7 @@ function Signup() {
           if(res.data===true)
           {
             console.log(res.data.validation);
-            localStorage.setItem('userDetails', JSON.stringify(res.data));
+            localStorage.setItem('userDetails', JSON.stringify(SignupDetails["email"]));
             window.location.replace('/login');
             
           }
