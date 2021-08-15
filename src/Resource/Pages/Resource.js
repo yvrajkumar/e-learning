@@ -87,14 +87,14 @@ function Resource() {
       <div style={{display:"flex", flexDirection: "row"}}>
         <div style={{background:"#CEEDFF", margin:"5%", width:"60%", height:"80%", display:"flex", flexWrap: "wrap" }}> 
           <div style={{padding:"5%"}}>
-          <iframe width="250%" height="250%" 
+          <iframe width="720px" height="350px" 
             src={"https://www.youtube.com/embed/"+ResourceDetails.resourceLink}
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
           </div>
-          <div style={{marginTop:"25%", padding:"20px",display:"flex"}}>
+          <div style={{padding:"20px",display:"flex"}}>
             <h2>Video URL: </h2>
             <a href="https://www.youtube.com/embed/yfoY53QXEnI" style={{padding:"5px"}}>https://www.youtube.com/embed/yfoY53QXEnI</a>
           </div>
