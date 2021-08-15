@@ -35,7 +35,7 @@ function Signup() {
           {
             console.log(res.data.validation);
             localStorage.setItem('userDetails', JSON.stringify(SignupDetails["email"]));
-            window.location.replace('/login');
+            history.push('/login');
             
           }
           else{
@@ -51,7 +51,7 @@ function Signup() {
 
       const homepageHandler = async (e) => {
         e.preventDefault();
-        window.location.replace('/');
+        history.push('/home');
         return;
     }
     
