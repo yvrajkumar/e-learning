@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+.Signup{
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 7rem;
+    padding: 0,2rem;
+    background-color: #F2F2F2;
+    
+}
+
+.Signup_Image{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+}
+.Signup_Image img{
+    width: 500px;
+}
+
+.Signup_Box{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10% ;
+    align-items: center;
+}
+
+::placeholder { 
+    color: black;
+  }
+.Signup_Box input{
+    width: 150%;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-color: transparent;
+    background-color: #CCCCCC;
+    font-weight: bold;
+    color: black; 
+}
+
+.Signup_Box input[type="submit"]{
+    width: 70%;
+    padding: 10px;
+    margin-left: 120px;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+}
+.Signup_Box input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.Signup_Box .title_SU{
+    margin-left: 150px;
+    color: White;
+}
+
+.Signup_Box .bottomLinkWrapper{
+    margin-left: 150px;
+}
+
+.Signup_Box a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.Signup_Box a:hover{
+    text-decoration: underline;
+}
+
